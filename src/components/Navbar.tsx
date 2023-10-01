@@ -10,12 +10,13 @@ const Navbar = () => {
 
   useEffect(() => {
     checkTheme();
-  }, [userTheme]);
+  }, []);
 
   const checkTheme = () => {
     if (userTheme === "dark" || (!userTheme && systmeTheme)) {
       document.documentElement.classList.add("dark");
-      return;
+    } else {
+      document.documentElement.classList.remove("dark");
     }
   };
 
