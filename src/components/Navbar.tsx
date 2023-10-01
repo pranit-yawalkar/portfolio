@@ -15,8 +15,10 @@ const Navbar = () => {
   const checkTheme = () => {
     if (userTheme === "dark" || (!userTheme && systmeTheme)) {
       document.documentElement.classList.add("dark");
+      setUserTheme("dark");
     } else {
       document.documentElement.classList.remove("dark");
+      setUserTheme("light");
     }
   };
 
