@@ -5,9 +5,11 @@ import Hero from "../components/Hero";
 const Home = () => {
   return (
     <>
-      <div className="max-w-[1200px] mx-auto">
-        <Navbar />
-        <Hero />
+      <div className="main-container dark:bg-black">
+        <div className="max-w-[1200px] mx-auto">
+          <Navbar />
+          <Hero />
+        </div>
       </div>
     </>
   );

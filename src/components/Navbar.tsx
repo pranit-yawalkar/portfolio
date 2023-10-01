@@ -1,7 +1,36 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import profilePhoto from "../assets/images/photo_square.jpg";
+import { MdBrightness2 } from "react-icons/md";
+import { BsBrightnessHighFill } from "react-icons/bs";
+
 const Navbar = () => {
+  const [userTheme, setUserTheme] = useState(localStorage.getItem("theme"));
+  const systmeTheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+  useEffect(() => {
+    checkTheme();
+  }, [userTheme]);
+
+  const checkTheme = () => {
+    if (userTheme === "dark" || (!userTheme && systmeTheme)) {
+      document.documentElement.classList.add("dark");
+      return;
+    }
+  };
+
+  const changeTheme = () => {
+    if (document.documentElement.classList.contains("dark")) {
+      document.documentElement.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+      setUserTheme("light");
+      return;
+    }
+    document.documentElement.classList.add("dark");
+    localStorage.setItem("theme", "dark");
+    setUserTheme("dark");
+  };
+
   return (
     <header className="max-w-[1200px] mx-auto">
       <nav className="flex justify-between items-center w-full py-6">
@@ -14,7 +43,7 @@ const Navbar = () => {
             />
           </Link>
         </div>
-        <ul className="flex gap-10 items-center">
+        <ul className="flex gap-10 items-center dark:text-white">
           <li className="text-lg hover:text-primary font-medium">
             <Link to="/">About Me</Link>
           </li>
@@ -26,6 +55,16 @@ const Navbar = () => {
           </li>
           <li className="text-lg hover:text-primary font-medium">
             <Link to="/">Experience</Link>
+          </li>
+          <li
+            onClick={changeTheme}
+            className="text-lg hover:text-primary font-medium cursor-pointer"
+          >
+            {userTheme === "dark" ? (
+              <BsBrightnessHighFill />
+            ) : (
+              <MdBrightness2 />
+            )}
           </li>
         </ul>
       </nav>
