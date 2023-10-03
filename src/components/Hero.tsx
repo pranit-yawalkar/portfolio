@@ -3,8 +3,8 @@ import profilePhoto from "../assets/images/hero_img.svg";
 
 const Hero = () => {
   return (
-    <div className="flex min-h-[600px] justify-between items-center">
-      <div className="w-3/5">
+    <div className="flex min-h-[600px] flex-col-reverse py-5 md:flex-row justify-between items-center">
+      <div className="md:w-3/5">
         <div className="flex flex-col gap-2">
           <h6 className="font-medium text-2xl dark:text-white">HELLO, I'M</h6>
           <h2 className="font-extrabold text-7xl font-bolsomiq dark:text-white">
@@ -29,7 +29,7 @@ const Hero = () => {
           </button>
         </div>
       </div>
-      <div className="rounded-full w-2/5 text-center -mt-20">
+      <div className="rounded-full md:w-2/5 text-center md:-mt-20">
         <img className="w-full mx-auto" src={profilePhoto} alt="profile" />
       </div>
     </div>
