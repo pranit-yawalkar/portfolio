@@ -40,29 +40,29 @@ const Navbar = () => {
   };
 
   return (
-    <header className="max-w-[1200px] mx-auto">
+    <header className="max-w-[1200px] mx-auto sticky top-0 bg-white dark:bg-darkGrey">
       <nav className="flex justify-between items-center w-full py-6">
         <div className="flex items-center justify-center w-12 h-12 text-white">
-          <Link to="/" className="text-xl font-bold w-full">
+          <a href="#home" className="text-xl font-bold w-full">
             <img
               className="w-full rounded-full border-[1px] border-primary text-center bg-primary"
               src={profilePhoto}
               alt="profile"
             />
-          </Link>
+          </a>
         </div>
         <ul className="flex gap-10 items-center dark:text-white">
           <li className="hidden md:block text-lg hover:text-primary font-medium">
-            <Link to="/">About Me</Link>
+            <a href="#about">About Me</a>
           </li>
           <li className="hidden md:block text-lg hover:text-primary font-medium">
-            <Link to="/">Skills</Link>
+            <a href="#skills">Skills</a>
           </li>
           <li className="hidden md:block text-lg hover:text-primary font-medium">
-            <Link to="/">Projects</Link>
+            <a href="#projects">Projects</a>
           </li>
           <li className="hidden md:block text-lg hover:text-primary font-medium">
-            <Link to="/">Experience</Link>
+            <a href="#experience">Experience</a>
           </li>
           <li
             onClick={changeTheme}
@@ -96,7 +96,7 @@ const Navbar = () => {
             showMenu ? "translate-x-0 left-8" : "-translate-x-full left-0"
           } py-8 space-y-6 font-bold bg-white dark:bg-black dark:text-white sm:w-auto sm:self-center right-8 drop-shadow-md`}
         >
-          <a href="#">About Me</a>
+          <a href="#about">About Me</a>
           <a href="#">Skills</a>
           <a href="#">Projects Us</a>
           <a href="#">Experience</a>

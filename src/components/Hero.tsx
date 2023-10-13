@@ -3,7 +3,7 @@ import profilePhoto from "../assets/images/hero_img.svg";
 
 const Hero = () => {
   return (
-    <div className="max-w-[1200px] px-5 mx-auto">
+    <div id="home" className="max-w-[1200px] px-5 mx-auto">
       <div className="flex min-h-[600px] flex-col-reverse py-5 md:flex-row justify-between items-center">
         <div className="md:w-3/5">
           <div className="flex flex-col gap-2">
