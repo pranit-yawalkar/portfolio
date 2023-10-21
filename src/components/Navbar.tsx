@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import profilePhoto from "../assets/images/photo_square.jpg";
 import { MdBrightness2 } from "react-icons/md";
 import { BsBrightnessHighFill } from "react-icons/bs";
@@ -11,6 +10,7 @@ const Navbar = () => {
 
   useEffect(() => {
     checkTheme();
+    // eslint-disable-next-line
   }, []);
 
   const checkTheme = () => {
