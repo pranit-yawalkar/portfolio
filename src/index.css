@@ -6,6 +6,10 @@
   background-color: linear-gradient(180deg, #fff 15.22%, #e9f6ff 100%);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .hamburger {
   cursor: pointer;
   width: 24px;

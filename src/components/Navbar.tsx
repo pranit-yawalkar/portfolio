@@ -40,8 +40,8 @@ const Navbar = () => {
   };
 
   return (
-    <header className="max-w-[1200px] mx-auto sticky top-0 bg-white dark:bg-darkGrey">
-      <nav className="flex justify-between items-center w-full py-6">
+    <header className="w-100 sticky top-0 bg-white z-50 dark:bg-darkGrey">
+      <nav className="max-w-[1200px] mx-auto flex justify-between items-center w-full py-6 px-4 md:px-0">
         <div className="flex items-center justify-center w-12 h-12 text-white">
           <a href="#home" className="text-xl font-bold w-full">
             <img
@@ -96,10 +96,18 @@ const Navbar = () => {
             showMenu ? "translate-x-0 left-8" : "-translate-x-full left-0"
           } py-8 space-y-6 font-bold bg-white dark:bg-black dark:text-white sm:w-auto sm:self-center right-8 drop-shadow-md`}
         >
-          <a href="#about">About Me</a>
-          <a href="#">Skills</a>
-          <a href="#">Projects Us</a>
-          <a href="#">Experience</a>
+          <a onClick={toggleMenu} href="#about">
+            About Me
+          </a>
+          <a onClick={toggleMenu} href="#skills">
+            Skills
+          </a>
+          <a onClick={toggleMenu} href="#projects">
+            Projects
+          </a>
+          <a onClick={toggleMenu} href="#experience">
+            Experience
+          </a>
         </div>
       </div>
     </header>
