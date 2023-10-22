@@ -53,8 +53,10 @@ const Experience = () => {
               </span>
             </div>
             <ul className="font-light">
-              {experience.description.map((desc: string) => (
-                <li className="list-disc">{desc}</li>
+              {experience.description.map((desc: string, index: number) => (
+                <li key={index} className="list-disc">
+                  {desc}
+                </li>
               ))}
             </ul>
           </div>

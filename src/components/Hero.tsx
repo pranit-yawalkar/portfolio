@@ -1,9 +1,10 @@
 import React from "react";
 import profilePhoto from "../assets/images/hero_img.svg";
+// import resumeUrl from '../../src/assets/Files/cv.pdf';
 
 const Hero = () => {
   const downloadCV = () => {
-    const resumeUrl = "assets/cv.pdf";
+    const resumeUrl = "cv.pdf";
     const link = document.createElement("a");
 
     link.href = resumeUrl;
