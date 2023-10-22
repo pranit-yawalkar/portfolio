@@ -4,7 +4,7 @@ import profilePhoto from "../assets/images/hero_img.svg";
 
 const Hero = () => {
   const downloadCV = () => {
-    const resumeUrl = "cv.pdf";
+    const resumeUrl = "CV_Pranit_yawalkar_Full_Stack_Dev.pdf";
     const link = document.createElement("a");
 
     link.href = resumeUrl;
@@ -35,12 +35,12 @@ const Hero = () => {
             </p>
           </div>
           <div className="flex gap-4 mt-8 justify-center md:justify-start">
-            <a
+            <button
               onClick={downloadCV}
               className="bg-primary text-white cursor-pointer py-3 px-5 md:px-8 text-lg rounded-lg shadow-md"
             >
               Download CV
-            </a>
+            </button>
             <a
               href="#contact"
               className="border-primary border-2 py-3 px-5 md:px-8 text-lg rounded-lg shadow-md text-primary"
