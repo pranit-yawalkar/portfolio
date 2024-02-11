@@ -6,6 +6,7 @@ import {
   BiLogoTailwindCss,
   BiLogoTypescript,
 } from "react-icons/bi";
+import { TbBrandReactNative } from "react-icons/tb";
 
 interface SkillItem {
   icon: ReactElement;
@@ -18,16 +19,20 @@ const Skills = () => {
       name: "React",
     },
     {
+      icon: <TbBrandReactNative color="#61DBFB" size={100} />,
+      name: "React Native",
+    },
+    {
       icon: <FaAngular color="#c3002f" size={100} />,
       name: "Angular",
     },
     {
-      icon: <BiLogoSpringBoot color="#c6d7b9" size={100} />,
-      name: "Spring Boot",
-    },
-    {
       icon: <FaNodeJs color="#215732" size={100} />,
       name: "Nodejs",
+    },
+    {
+      icon: <BiLogoSpringBoot color="#c6d7b9" size={100} />,
+      name: "Spring Boot",
     },
     {
       icon: <BiLogoTypescript color="#007ACC" size={100} />,
