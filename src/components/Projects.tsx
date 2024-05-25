@@ -1,6 +1,7 @@
 import React from "react";
 import shoppingspot from "../assets/images/projects/shopping-spot.png";
 import shopforhome from "../assets/images/projects/shopforhome.jpeg";
+import vmeet from "../assets/images/projects/vmeet.png";
 
 interface ProjectItem {
   image: string;
@@ -11,6 +12,13 @@ interface ProjectItem {
 
 const Projects = () => {
   const projects: ProjectItem[] = [
+    {
+      image: vmeet,
+      title: "VMeet - A Video Conference App",
+      description:
+        "VMeet is a video conference application created using NextJS 13, ShadcnUI. This application involves instant meetings, schedule meetings, recording and advanced meeting features.",
+      url: "https://vmeetapp.vercel.app/",
+    },
     {
       image: shoppingspot,
       title: "Shopping Spot Ecommerce App",

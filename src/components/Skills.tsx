@@ -7,6 +7,8 @@ import {
   BiLogoTypescript,
 } from "react-icons/bi";
 import { TbBrandReactNative } from "react-icons/tb";
+import { RiNextjsFill } from "react-icons/ri";
+import { FaAws } from "react-icons/fa";
 
 interface SkillItem {
   icon: ReactElement;
@@ -23,8 +25,16 @@ const Skills = () => {
       name: "React Native",
     },
     {
+      icon: <RiNextjsFill size={100} />,
+      name: "NextJS"
+    },
+    {
       icon: <FaAngular color="#c3002f" size={100} />,
       name: "Angular",
+    },
+    {
+      icon: <FaAws  color="#ff9c08" size={100} />,
+      name: "AWS Services",
     },
     {
       icon: <FaNodeJs color="#215732" size={100} />,
