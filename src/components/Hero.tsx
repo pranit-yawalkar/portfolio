@@ -4,7 +4,7 @@ import profilePhoto from "../assets/images/hero_img.svg";
 
 const Hero = () => {
   const downloadCV = () => {
-    const resumeUrl = "CV_Pranit_yawalkar_Full_Stack_Dev.pdf";
+    const resumeUrl = "Pranit_Yawalkar_Full_Stack_Dev.pdf";
     const link = document.createElement("a");
 
     link.href = resumeUrl;
